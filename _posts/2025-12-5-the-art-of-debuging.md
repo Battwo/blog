@@ -19,9 +19,7 @@ Below, I’m going to walk you through four code snippets I debugged recently. I
 <h1> Temperature Trouble 
 </h1>
 
-```
-
-python
+```python
 temperature = 75
 
 if temperature > 80:
@@ -57,8 +55,7 @@ If the temperature is 25, the program prints nothing. Why? Because there’s no 
 The solution
 </h2>
 
-```
-python
+```python
 temperature = 25
 
 if temperature > 80:
@@ -69,7 +66,7 @@ elif temperature < 0:
     print("It's cold")
 else:
     print("It's cool")
-    
+
 ```
 
 
@@ -82,9 +79,7 @@ Counting Spaces
 </h1>
 
 
-```
-
-python
+```python
 text = "Hello, world, my name is"
 count = 0
 
@@ -116,8 +111,7 @@ The condition char == "" will never be true. That’s because an empty string is
 The solution
 </h2>
 
-```
-python
+```python
 text = "Hello, world, my name is"
 count = 0
 
@@ -136,8 +130,7 @@ Now it correctly counts the spaces! This is a classic logic bug. the program run
 Even or Odd?
 </h1>
 
-```
-python
+```python
 print("give me a number")
 
 n = input()
@@ -175,8 +168,7 @@ Answer: C!
 The solution
 </h2>
 
-```
-python
+```python
 print("Give me a number")
 n = int(input())
 
@@ -192,8 +184,7 @@ types matter and logic matters. Debugging step by step helps you catch both issu
 Password Checker
 </h1>
 
-```
-python
+```python
 attempts = 0
 correct_password = "secret"
 
@@ -233,7 +224,7 @@ If you picked Answer: B then you're right! The code is checking against the lite
 The solution
 </h2>
 
-```
+```python
 attempts = 0
 correct_password = "secret"
 
@@ -250,7 +241,7 @@ while True:
     if attempts >= 3:
         print("Too many attempts")
         break
-
+        
 ```
 
 Always check variable names and loop logic when debugging, it’s amazing how one small mistake can make the program behave completely wrong.
