@@ -14,13 +14,12 @@ Believe it or not, that exact process is basically what debugging is. Debugging 
 That’s how I debug! I test things one at a time, pay attention to the results, and keep going until the problem is solved. It takes patience, but it’s also incredibly satisfying when the lightbulb finally clicks.
 
 Below, I’m going to walk you through four code snippets I debugged recently. I’ll show you the original code, explain what it’s supposed to do, the problems I found, and how I fixed it. Whether you’re a coding pro or just starting out, I promise it’ll make sense, and maybe, just maybe even be a little fun.
-<img src="/blog/images/Sitting.jpeg" alt="Sitting detective"> 
+
 
 <h1> Temperature Trouble 
 </h1>
 
-```
-temperature = 75
+```temperature = 75
 
 if temperature > 80:
     print("It's hot")
@@ -46,10 +45,8 @@ If the temperature is 25, what will this code print?
 Answer: D – Nothing!
 
 
-If the temperature is 25, the program prints nothing. Why? Because there’s no instruction for temperatures between 0 and 50. The code has a “logic gap.”
-
-<img src="/blog/images/lol.jpeg" alt="conditions and elif else"> 
-use this image for help!
+If the temperature is 25, the program prints nothing. Why? Because there’s no instruction for temperatures between 0 and 50. The code has a 
+“logic gap.”
 
 <h2>
 The solution
@@ -65,7 +62,7 @@ elif temperature < 0:
     print("It's cold")
 else:
     print("It's cool")
-   ```
+```
 
 
 Now it prints “It’s cool” for temperatures in that range. Debugged and ready to go!
@@ -76,8 +73,7 @@ Now it prints “It’s cool” for temperatures in that range. Debugged and rea
 Counting Spaces 
 </h1>
 
-```
-text = "Hello, world, my name is"
+```text = "Hello, world, my name is"
 count = 0
 
 for char in text:
@@ -108,8 +104,7 @@ The condition char == "" will never be true. That’s because an empty string is
 The solution
 </h2>
 
-```
-text = "Hello, world, my name is"
+```text = "Hello, world, my name is"
 count = 0
 
 for char in text:
@@ -127,8 +122,7 @@ Now it correctly counts the spaces! This is a classic logic bug. the program run
 Even or Odd?
 </h1>
 
-```
-print("give me a number")
+```print("give me a number")
 n = input()
 
 for num in range(1, n):
@@ -164,8 +158,7 @@ Answer: C!
 The solution
 </h2>
 
-```
-print("Give me a number")
+```print("Give me a number")
 n = int(input())
 
 for num in range(1, n):
@@ -174,14 +167,12 @@ for num in range(1, n):
     else:
         print(num, "is odd.")
 ```
- types matter and logic matters. Debugging step by step helps you catch both issues.
+types matter and logic matters. Debugging step by step helps you catch both issues.
+<h1>
+Password Checker
+</h1>
 
- <h1>
- Password Checker
- </h1>
-
- ```
- attempts = 0
+```attempts = 0
 correct_password = "secret"
 
 while True:
@@ -198,7 +189,7 @@ while True:
         break
  ```
 
- the perpous for this code is to ask the user for a password, check if it’s correct, and limit attempts to 3
+the perpous for this code is to ask the user for a password, check if it’s correct, and limit attempts to 3
 
 <h2>
 Quiz Time
