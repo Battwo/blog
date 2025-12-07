@@ -19,7 +19,10 @@ Below, I’m going to walk you through four code snippets I debugged recently. I
 <h1> Temperature Trouble 
 </h1>
 
-```temperature = 75
+```
+
+python
+temperature = 75
 
 if temperature > 80:
     print("It's hot")
@@ -27,12 +30,14 @@ elif temperature > 50:
     print("It's temperate")
 elif temperature < 0:
     print("It's cold")
+
+
 ```
 
 This code is supposed to tell us whether the temperature is hot, temperate, or cold. Basically, we’re giving the computer a thermometer and asking it to explain the weather in words
 
 <h2>
-whats wrong?
+what's wrong?
 </h2>
 
 If the temperature is 25, what will this code print?
@@ -52,7 +57,9 @@ If the temperature is 25, the program prints nothing. Why? Because there’s no 
 The solution
 </h2>
 
-```temperature = 25
+```
+python
+temperature = 25
 
 if temperature > 80:
     print("It's hot")
@@ -62,6 +69,7 @@ elif temperature < 0:
     print("It's cold")
 else:
     print("It's cool")
+    
 ```
 
 
@@ -73,7 +81,11 @@ Now it prints “It’s cool” for temperatures in that range. Debugged and rea
 Counting Spaces 
 </h1>
 
-```text = "Hello, world, my name is"
+
+```
+
+python
+text = "Hello, world, my name is"
 count = 0
 
 for char in text:
@@ -88,10 +100,10 @@ This snippet is meant to count how many spaces are in a string. It loops through
 
 <h2>
 What's wrong?
+<h2>
+What's wrong?
 </h2>
-what is the issue with this code?
-
-1. The for loop is not going through the string correctly.
+what's the issue with this code?
 2. The if condition char == "" will never be true, so spaces are not counted.
 3. The count variable should start at 1 instead of 0.
 4. The print statement is in the wrong place.
@@ -104,7 +116,9 @@ The condition char == "" will never be true. That’s because an empty string is
 The solution
 </h2>
 
-```text = "Hello, world, my name is"
+```
+python
+text = "Hello, world, my name is"
 count = 0
 
 for char in text:
@@ -122,7 +136,10 @@ Now it correctly counts the spaces! This is a classic logic bug. the program run
 Even or Odd?
 </h1>
 
-```print("give me a number")
+```
+python
+print("give me a number")
+
 n = input()
 
 for num in range(1, n):
@@ -139,7 +156,7 @@ This code should tell us whether numbers from 1 to n are even or odd.
 What's wrong?
 </h2>
 
-whats the issue with this code? 
+what's the issue with this code? 
 
 
 1. input() gives a string, not a number, so range(1, n) will cause an error.
@@ -158,7 +175,9 @@ Answer: C!
 The solution
 </h2>
 
-```print("Give me a number")
+```
+python
+print("Give me a number")
 n = int(input())
 
 for num in range(1, n):
@@ -166,13 +185,16 @@ for num in range(1, n):
         print(num, "is even.")
     else:
         print(num, "is odd.")
+
 ```
 types matter and logic matters. Debugging step by step helps you catch both issues.
 <h1>
 Password Checker
 </h1>
 
-```attempts = 0
+```
+python
+attempts = 0
 correct_password = "secret"
 
 while True:
@@ -187,9 +209,10 @@ while True:
     if attempts > 3:
         print("Too many attempts")
         break
- ```
 
-the perpous for this code is to ask the user for a password, check if it’s correct, and limit attempts to 3
+```
+
+the purpose for this code is to ask the user for a password, check if it’s correct, and limit attempts to 3
 
 <h2>
 Quiz Time
@@ -204,7 +227,7 @@ Take a close look at the code. What’s wrong here?
 
 Hint: Think about what the programmer meant versus what the code actually does.
 
-If you picked Answer: B then your right! The code is checking against the literal string "incorrect_password" instead of the variable correct_password. That means it always prints “Incorrect password,” even if the user enters "secret"!
+If you picked Answer: B then you're right! The code is checking against the literal string "incorrect_password" instead of the variable correct_password. That means it always prints “Incorrect password,” even if the user enters "secret"!
 
 <h2>
 The solution
