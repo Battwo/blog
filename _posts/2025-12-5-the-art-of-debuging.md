@@ -93,11 +93,11 @@ print(count)
 
 This snippet is meant to count how many spaces are in a string. It loops through each character and increases a counter whenever it finds a space.
 
-<h2>
-What's wrong?
+
 <h2>
 What's wrong?
 </h2>
+
 what's the issue with this code?
 2. The if condition char == "" will never be true, so spaces are not counted.
 3. The count variable should start at 1 instead of 0.
@@ -200,7 +200,6 @@ while True:
     if attempts > 3:
         print("Too many attempts")
         break
-
 ```
 
 the purpose for this code is to ask the user for a password, check if it’s correct, and limit attempts to 3
@@ -241,7 +240,7 @@ while True:
     if attempts >= 3:
         print("Too many attempts")
         break
-        
+
 ```
 
 Always check variable names and loop logic when debugging, it’s amazing how one small mistake can make the program behave completely wrong.
